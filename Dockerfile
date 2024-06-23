@@ -5,4 +5,4 @@ FROM ubuntu:latest
 RUN apt-get update
 
 # Install curl
-RUN apt-get install -y curl
+RUN apt-get install -y curl git
