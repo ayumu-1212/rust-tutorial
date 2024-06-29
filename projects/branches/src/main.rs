@@ -1,6 +1,10 @@
 fn main() {
-    let condition = true;
-    let number = if condition { 5 } else { 6 };
-
-    println!("The value of number is: {number}");
+    let mut count = 0;
+    loop {
+        if count > 10 {
+            break;
+        };
+        println!("again!");
+        count = count + 1;
+    }
 }
