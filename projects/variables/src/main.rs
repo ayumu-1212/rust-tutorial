@@ -1,22 +1,13 @@
-use std::io;
-
 fn main() {
-    let a = [1, 2, 3, 4, 5];
+    another_function(5);
 
-    println!("Please enter an array index.");
+    print_labeled_measurement(3, 'h');
+}
 
-    let mut index = String::new();
+fn another_function(x: i32) {
+    println!("The value of x is {x}")
+}
 
-    io::stdin()
-        .read_line(&mut index)
-        .expect("Failed to read line");
-
-    let index: usize = index
-        .trim()
-        .parse()
-        .expect("Index entered was not a number");
-
-    let element = a[index];
-
-    println!("The value of the element at index {index} is: {element}");
+fn print_labeled_measurement(value: i32, unit_label: char) {
+    println!("The measurement is: {value}{unit_label}")
 }
