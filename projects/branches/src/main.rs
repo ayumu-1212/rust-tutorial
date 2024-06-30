@@ -1,8 +1,18 @@
 fn main() {
-    let s = String::from("hello");
+    let s = String::from("hello world");
 
-    let r1 = &s;
-    let r2 = &s;
+    let size = first_word_len(&s);
 
-    println!("{r1}, {r2}");
+    println!("size: {size}");
+}
+
+fn first_word_len(s: &String) -> usize {
+    let bytes = s.as_bytes();
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return i;
+        }
+    }
+
+    s.len()
 }
