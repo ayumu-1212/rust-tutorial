@@ -1,5 +1,10 @@
 fn main() {
-    for element in (1..4).rev() {
-        println!("the value is: {element}");
-    }
+    let s1 = String::from("hello");
+    let len = calculate_length(&s1);
+
+    println!("The length of '{}' is {}.", s1, len);
+}
+
+fn calculate_length(s: &String) -> usize {
+    s.len()
 }
