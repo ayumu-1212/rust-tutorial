@@ -1,7 +1,7 @@
-struct Restangle(u32, u32);
+struct Rectangle(u32, u32);
 
 fn main() {
-    let rectangle = Restangle(30, 50);
+    let rectangle = Rectangle(30, 50);
 
     println!(
         "The area of the rectangle is {} square pixels.",
@@ -9,6 +9,6 @@ fn main() {
     );
 }
 
-fn area(dimensions: (u32, u32)) -> u32 {
+fn area(dimensions: Rectangle) -> u32 {
     dimensions.0 * dimensions.1
 }
