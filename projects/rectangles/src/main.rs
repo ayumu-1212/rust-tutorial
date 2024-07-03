@@ -1,10 +1,11 @@
+struct Restangle(u32, u32);
+
 fn main() {
-    let width1 = 30;
-    let height1 = 50;
+    let rectangle = Restangle(30, 50);
 
     println!(
         "The area of the rectangle is {} square pixels.",
-        area(width1, height1)
+        area(rectangle.0, rectangle.1)
     );
 }
 
